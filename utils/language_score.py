@@ -10,4 +10,5 @@ def score_meaning(text):
     if len(all_characters) == 0:
         return 0
     repetition_count = Counter(all_characters)
-    return (len(all_characters)) ** 2 / len(repetition_count)
+    score = (len(all_characters)) ** 2 / len(repetition_count)
+    return score

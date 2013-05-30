@@ -1,6 +1,6 @@
-from .xor import variable_length_xor
-from .language_score import score_meaning
-from problem1 import hex_to_bytes
+from utils.xor import variable_length_xor
+from utils.language_score import score_meaning
+from utils.converters import hex_to_bytes
 
 
 def test():

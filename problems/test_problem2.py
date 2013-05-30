@@ -1,5 +1,5 @@
-from problem1 import hex_to_bytes, pretty_hex_str
-from .xor import xor_bytes
+from utils.converters import hex_to_bytes, pretty_hex_str
+from utils.xor import xor_bytes
 
 
 def test_xor():

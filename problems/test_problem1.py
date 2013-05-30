@@ -1,4 +1,4 @@
-from .hexto64 import pretty_hex_str, pretty_b64_str, hex_to_bytes
+from utils.converters import pretty_hex_str, pretty_b64_str, hex_to_bytes
 
 
 def test_hextob64():
@@ -9,6 +9,5 @@ def test_hextob64():
     _hex = pretty_hex_str(_bytes)
     assert(_hex == hex_string)
 
- 
 if __name__ == '__main__':
     test_hextob64()
