@@ -11,4 +11,5 @@ def test():
         decryption_tries = get_single_char_xor_cipher_decryptions(candidate)
         good_candidates.extend(get_top_n_meanings(decryption_tries, 1))
     good_candidates.sort(key=lambda tup: -tup[1])
+    print(good_candidates[0][0])
     assert(good_candidates[0][0] == 'Now that the party is jumping\n')
