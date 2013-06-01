@@ -1,12 +1,10 @@
-from .xor import variable_length_xor
+from .xor import xor_with_byte
 
 
-def get_n_char_xor_cipher_decryptions(bstring, n):
+def single_char_xor_decryption_candidates(bstring):
     all_candidates = []
-    for i in range(256 ** n):
-        narray = [(i >> 8 * (n - j)) % 256 for j in range(1, n + 1)]
-        b = bytes(narray)
-        decrypted_bytes = variable_length_xor(bstring, b)
+    for i in range(256):
+        decrypted_bytes = xor_with_byte(bstring, i)
         try:
             decrypted_string = decrypted_bytes.decode('utf-8')
         except UnicodeDecodeError:

@@ -1,12 +1,17 @@
-from .xor_cipher import get_n_char_xor_cipher_decryptions
-from .single_char_xor_cipher import get_single_char_xor_cipher_decryptions
 from .language_score import get_top_n_meanings
+from .xor_cipher import single_char_xor_decryption_candidates
 
 
 def decrypt(bstring, n):
     parts = [None] * n
     for i in range(n):
         partial_string = bstring[i::n]
-        candidates = get_single_char_xor_cipher_decryptions(partial_string)
+        candidates = single_char_xor_decryption_candidates(partial_string)
         parts[i], score = get_top_n_meanings(candidates, 1)[0]
-    return ''.join([''.join(x) for x in zip(*parts)])
+
+    main = ''.join([''.join(x) for x in zip(*parts)])
+    last_part_length = len(parts[-1])
+    ending = ''.join([x for part in parts
+                      for rest in part[last_part_length:]
+                      for x in rest])
+    return main + ending

@@ -3,6 +3,12 @@ def xor_bytes(bytes1, bytes2):
     return bytes(barray)
 
 
+def xor_with_byte(bstring, byte):
+    if type(byte) == bytes:
+        byte = byte[0]
+    return bytes([b ^ byte for b in bstring])
+
+
 def variable_length_xor(bytesting, key):
     # TODO: check that the length are multiples
     if len(bytesting) % len(key) != 0:
