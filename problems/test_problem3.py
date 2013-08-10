@@ -1,6 +1,6 @@
-from utils.converters import hex_to_bytes
-from utils.language_score import get_top_n_meanings
-from utils.xor_cipher import single_char_xor_decryption_candidates
+from cryptotools.converters import hex_to_bytes
+from cryptotools.language_score import get_top_n_meanings
+from cryptotools.xor_cipher import single_char_xor_decryption_candidates
 
 
 def test():

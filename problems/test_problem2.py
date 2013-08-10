@@ -1,5 +1,5 @@
-from utils.converters import hex_to_bytes, pretty_hex_str
-from utils.xor import xor_bytes
+from cryptotools.converters import hex_to_bytes, pretty_hex_str
+from cryptotools.xor import xor_bytes
 
 
 def test_xor():

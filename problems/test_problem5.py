@@ -1,6 +1,6 @@
-from utils.encrypt import hex_xor_encrypt
-from utils.converters import hex_to_bytes
-from utils.decrypt import decrypt
+from cryptotools.encrypt import hex_xor_encrypt
+from cryptotools.converters import hex_to_bytes
+from cryptotools.decrypt import decrypt
 
 
 def test():

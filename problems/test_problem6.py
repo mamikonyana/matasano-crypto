@@ -1,6 +1,6 @@
-from utils.converters import b64_to_bytes
-from utils.hamming_distance import hamming_distance
-from utils.decrypt import decrypt
+from cryptotools.converters import b64_to_bytes
+from cryptotools.hamming_distance import hamming_distance
+from cryptotools.decrypt import decrypt
 
 
 def test():

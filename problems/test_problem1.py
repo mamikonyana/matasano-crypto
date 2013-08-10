@@ -1,4 +1,4 @@
-from utils.converters import pretty_hex_str, pretty_b64_str, hex_to_bytes
+from cryptotools.converters import pretty_hex_str, pretty_b64_str, hex_to_bytes
 
 
 def test_hextob64():
